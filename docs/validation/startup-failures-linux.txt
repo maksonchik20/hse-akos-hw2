@@ -1,0 +1,5 @@
+PASS pthread_create failure at call 1 / clean shutdown / invariants=ok
+PASS pthread_create failure at call 2 / clean shutdown / invariants=ok
+PASS pthread_create failure at call 3 / clean shutdown / invariants=ok
+PASS pthread_create failure at call 5 / clean shutdown / invariants=ok
+RESULT passed=4 failed=0

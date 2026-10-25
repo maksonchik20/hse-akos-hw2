@@ -1,0 +1,38 @@
+t=0 event=STATE flower=1 gardener=0 request=0 detail=NORMAL; Нормальное развитие
+t=2 event=STATE flower=1 gardener=0 request=1 detail=WILTING; Цветок увядает
+t=2 event=REQUEST flower=1 gardener=0 request=1 detail=Цветок отправил новую заявку
+t=2 event=CHOICE flower=1 gardener=1 request=1 detail=Выбрана самая старая заявка FIFO
+t=2 event=ACCEPT flower=1 gardener=1 request=1 detail=Садовник единолично принял заявку
+t=2 event=STATE flower=1 gardener=1 request=1 detail=WATERING; Цветок поливается
+t=2 event=WATER_START flower=1 gardener=1 request=1 detail=Начался полив; высыхание приостановлено
+t=4 event=WATER_END flower=1 gardener=1 request=1 detail=Садовник закончил полив
+t=4 event=COMPLETE flower=1 gardener=1 request=1 detail=Выполненная заявка снята
+t=4 event=STATE flower=1 gardener=0 request=0 detail=RECOVERING; Цветок восстанавливается
+t=4 event=RECOVERY_START flower=1 gardener=0 request=0 detail=Началось восстановление
+t=6 event=STATE flower=1 gardener=0 request=0 detail=NORMAL; Нормальное развитие
+t=6 event=RECOVERY_END flower=1 gardener=0 request=0 detail=Цветок восстановился
+t=8 event=STATE flower=1 gardener=0 request=2 detail=WILTING; Цветок увядает
+t=8 event=REQUEST flower=1 gardener=0 request=2 detail=Цветок отправил новую заявку
+t=8 event=CHOICE flower=1 gardener=1 request=2 detail=Выбрана самая старая заявка FIFO
+t=8 event=ACCEPT flower=1 gardener=1 request=2 detail=Садовник единолично принял заявку
+t=8 event=STATE flower=1 gardener=1 request=2 detail=WATERING; Цветок поливается
+t=8 event=WATER_START flower=1 gardener=1 request=2 detail=Начался полив; высыхание приостановлено
+t=10 event=WATER_END flower=1 gardener=1 request=2 detail=Садовник закончил полив
+t=10 event=COMPLETE flower=1 gardener=1 request=2 detail=Выполненная заявка снята
+t=10 event=STATE flower=1 gardener=0 request=0 detail=RECOVERING; Цветок восстанавливается
+t=10 event=RECOVERY_START flower=1 gardener=0 request=0 detail=Началось восстановление
+t=12 event=STATE flower=1 gardener=0 request=0 detail=NORMAL; Нормальное развитие
+t=12 event=RECOVERY_END flower=1 gardener=0 request=0 detail=Цветок восстановился
+t=14 event=STATE flower=1 gardener=0 request=3 detail=WILTING; Цветок увядает
+t=14 event=REQUEST flower=1 gardener=0 request=3 detail=Цветок отправил новую заявку
+t=14 event=CHOICE flower=1 gardener=1 request=3 detail=Выбрана самая старая заявка FIFO
+t=14 event=ACCEPT flower=1 gardener=1 request=3 detail=Садовник единолично принял заявку
+t=14 event=STATE flower=1 gardener=1 request=3 detail=WATERING; Цветок поливается
+t=14 event=WATER_START flower=1 gardener=1 request=3 detail=Начался полив; высыхание приостановлено
+t=16 event=WATER_END flower=1 gardener=1 request=3 detail=Садовник закончил полив
+t=16 event=COMPLETE flower=1 gardener=1 request=3 detail=Выполненная заявка снята
+t=16 event=STATE flower=1 gardener=0 request=0 detail=RECOVERING; Цветок восстанавливается
+t=16 event=RECOVERY_START flower=1 gardener=0 request=0 detail=Началось восстановление
+t=18 event=STATE flower=1 gardener=0 request=0 detail=NORMAL; Нормальное развитие
+t=18 event=RECOVERY_END flower=1 gardener=0 request=0 detail=Цветок восстановился
+SUMMARY reason=time_limit time=20 created=3 completed=3 cancelled=0 pending=0 assigned=0 waterings=3 conflicts=0 overwater=0 dried=0 alive=1 invariants=ok

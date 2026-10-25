@@ -1,0 +1,21 @@
+t=0 event=STATE flower=1 gardener=0 request=0 detail=NORMAL; Нормальное развитие
+t=1 event=STATE flower=1 gardener=0 request=1 detail=WILTING; Цветок увядает
+t=1 event=REQUEST flower=1 gardener=0 request=1 detail=Цветок отправил новую заявку
+t=1 event=CHOICE flower=1 gardener=1 request=1 detail=Выбрана самая старая заявка FIFO
+t=1 event=ACCEPT flower=1 gardener=1 request=1 detail=Садовник единолично принял заявку
+t=1 event=STATE flower=1 gardener=1 request=1 detail=WATERING; Цветок поливается
+t=1 event=WATER_START flower=1 gardener=1 request=1 detail=Начался полив; высыхание приостановлено
+t=2 event=WATER_END flower=1 gardener=1 request=1 detail=Садовник закончил полив
+t=2 event=COMPLETE flower=1 gardener=1 request=1 detail=Выполненная заявка снята
+t=2 event=STATE flower=1 gardener=0 request=0 detail=RECOVERING; Цветок восстанавливается
+t=2 event=RECOVERY_START flower=1 gardener=0 request=0 detail=Началось восстановление
+t=3 event=STATE flower=1 gardener=0 request=0 detail=NORMAL; Нормальное развитие
+t=3 event=RECOVERY_END flower=1 gardener=0 request=0 detail=Цветок восстановился
+t=4 event=STATE flower=1 gardener=0 request=2 detail=WILTING; Цветок увядает
+t=4 event=REQUEST flower=1 gardener=0 request=2 detail=Цветок отправил новую заявку
+t=4 event=CHOICE flower=1 gardener=1 request=2 detail=Выбрана самая старая заявка FIFO
+t=4 event=ACCEPT flower=1 gardener=1 request=2 detail=Садовник принял новую заявку
+t=4 event=OVERWATER flower=1 gardener=1 request=2 detail=Повторный полив внутри защиты: цветок погиб
+t=4 event=STATE flower=1 gardener=0 request=0 detail=DEAD_OVERWATER; Цветок погиб от перелива
+t=4 event=CANCEL flower=1 gardener=1 request=2 detail=Заявка снята после перелива
+SUMMARY reason=all_inactive time=4 created=2 completed=1 cancelled=1 pending=0 assigned=0 waterings=1 conflicts=0 overwater=1 dried=0 alive=0 invariants=ok
