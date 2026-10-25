@@ -1,0 +1,16 @@
+ThreadSanitizer: Apple Clang, C11, -pthread -fsanitize=thread, TSAN_OPTIONS=halt_on_error=1.
+Build succeeded without warnings.
+
+concurrency
+COMMAND: /Users/maksonchik/Documents/Codex/2026-10-07/files-mentioned-by-the-user-i/work/hw2-implementation/tsan-build/smart-flowers --flowers 32 --gardeners 8 --request-threshold 1 --death-threshold 100 --water-duration 3 --recovery-duration 2 --protection-interval 0 --duration 300 --delay-ms 2 --log /Users/maksonchik/Documents/Codex/2026-10-07/files-mentioned-by-the-user-i/work/hw2-implementation/tsan-concurrency-events.log
+EXIT: 0
+SUMMARY reason=time_limit time=300 created=451 completed=424 cancelled=0 pending=23 assigned=4 waterings=428 conflicts=1426 overwater=0 dried=0 alive=32 invariants=ok
+STDERR: empty; no ThreadSanitizer diagnostics.
+
+interrupt
+COMMAND: /Users/maksonchik/Documents/Codex/2026-10-07/files-mentioned-by-the-user-i/work/hw2-implementation/tsan-build/smart-flowers --flowers 2 --gardeners 4 --request-threshold 1 --death-threshold 100 --water-duration 1000000 --unlimited true --log /Users/maksonchik/Documents/Codex/2026-10-07/files-mentioned-by-the-user-i/work/hw2-implementation/tsan-interrupt-events.log
+READY: True
+EXIT: 130
+SUMMARY reason=interrupted time=2 created=2 completed=0 cancelled=0 pending=0 assigned=2 waterings=2 conflicts=5 overwater=0 dried=0 alive=2 invariants=ok
+STDERR: empty; no ThreadSanitizer diagnostics.
+

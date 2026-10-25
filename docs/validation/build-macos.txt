@@ -1,0 +1,5 @@
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -O2 -Wall -Wextra -Wpedantic -pthread -MMD -MP -c src/main.c -o build/main.o
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -O2 -Wall -Wextra -Wpedantic -pthread -MMD -MP -c src/config.c -o build/config.o
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -O2 -Wall -Wextra -Wpedantic -pthread -MMD -MP -c src/io.c -o build/io.o
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -O2 -Wall -Wextra -Wpedantic -pthread -MMD -MP -c src/model.c -o build/model.o
+cc -std=c11 -O2 -Wall -Wextra -Wpedantic -pthread build/main.o build/config.o build/io.o build/model.o  -o build/smart-flowers

@@ -1,0 +1,76 @@
+./tests/run_tests.sh ./build/smart-flowers
+PASS обычный цикл и восстановление
+PASS конкуренция четырёх садовников
+PASS засыхание в очереди
+PASS перелив по новой заявке
+PASS повторный полив без защиты
+PASS без лимита / все неактивны
+PASS нет садовников / все неактивны
+PASS засыхание раньше отправки заявки
+PASS скорость и округление вверх
+PASS минимум один такт полива
+PASS FIFO / возраст заявки
+PASS разные скорости садовников
+PASS повторные конкурентные запуски
+PASS уведомления после отмены очереди
+PASS нулевой период наблюдения
+PASS ноль цветов и садовников
+PASS верхние границы параметров
+PASS приоритет CLI / повторные ключи / итоговый размер списков
+PASS справка
+PASS ошибка CLI ['--unknown', '1']
+PASS ошибка CLI ['--flowers']
+PASS ошибка CLI ['--flowers', '-1']
+PASS ошибка CLI ['--flowers', '1001']
+PASS ошибка CLI ['--flowers', '1.5']
+PASS ошибка CLI ['--flowers', '18446744073709551616']
+PASS ошибка CLI ['--gardeners', '1001']
+PASS ошибка CLI ['--duration', '1000001']
+PASS ошибка CLI ['--duration', '-1']
+PASS ошибка CLI ['--delay-ms', '60001']
+PASS ошибка CLI ['--water-duration', '0']
+PASS ошибка CLI ['--recovery-duration', '0']
+PASS ошибка CLI ['--request-threshold', '0']
+PASS ошибка CLI ['--request-threshold', '30', '--death-threshold', '30']
+PASS ошибка CLI ['--request-threshold', '31', '--death-threshold', '30']
+PASS ошибка CLI ['--dry-rates', '0']
+PASS ошибка CLI ['--dry-rates', '1000001']
+PASS ошибка CLI ['--speeds', '0']
+PASS ошибка CLI ['--flowers', '2', '--dry-rates', '1,2,3']
+PASS ошибка CLI ['--gardeners', '3', '--speeds', '1,2']
+PASS ошибка CLI ['--dry-rates', '1,']
+PASS ошибка CLI ['--dry-rates', '1,,2']
+PASS ошибка CLI ['--policy', 'fifo']
+PASS ошибка CLI ['--duration=0']
+PASS ошибка CLI ['--unlimited']
+PASS ошибка CLI ['--quiet']
+PASS ошибка CLI ['--log', '']
+PASS ошибка CLI ['--stats', '']
+PASS ошибка CLI ['--config', 'missing-file.conf']
+PASS ошибка CLI ['--config', 'a.conf', '--config', 'b.conf']
+PASS ошибка CLI ['--log', 'missing-directory/log']
+PASS ошибка CLI ['--unlimited', '1']
+PASS ошибка CLI ['--dry-rates', 'nan']
+PASS ошибка конфигурации 'unknown=1\n'
+PASS ошибка конфигурации 'flowers\n'
+PASS ошибка конфигурации 'flowers=\n'
+PASS ошибка конфигурации 'flowers=no\n'
+PASS ошибка конфигурации 'unlimited=maybe\n'
+PASS ошибка конфигурации 'dry_rates=1\n'
+PASS ошибка конфигурации 'flowers=1\x00\n'
+PASS ошибка конфигурации 'duration=0\nduration=0\nduration=0\nduration=0\ndurati'
+PASS защита файлов от alias: same
+PASS защита файлов от alias: hardlink
+PASS защита файлов от alias: symlink
+SKIP недопустимый выходной файл: /dev/full отсутствует на этой ОС
+SKIP ошибка write(stdout): /dev/full отсутствует на этой ОС
+PASS ошибка stdout из рабочего потока
+PASS SIGINT unlimited=False delay=0
+PASS SIGINT unlimited=False delay=50
+PASS SIGINT unlimited=True delay=0
+PASS SIGINT unlimited=True delay=50
+PASS SIGINT / пустая очередь и ожидание 60 секунд / unlimited=False
+PASS SIGINT / восстановление и спящие садовники / unlimited=False
+PASS SIGINT / пустая очередь и ожидание 60 секунд / unlimited=True
+PASS SIGINT / восстановление и спящие садовники / unlimited=True
+RESULT passed=72 failed=0 skipped=2
